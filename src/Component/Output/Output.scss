@@ -1,0 +1,23 @@
+.output{
+    &__text{
+        font-family: 'Poppins ExtraBold';
+        font-size: 2rem;
+        text-transform: lowercase;
+
+        .time {
+            color: rgb(140, 71, 253);
+            padding-right: 0.3rem ;
+            font-size: 42px;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        &__text{
+            color: #cdc4c4;
+        }
+
+        .time {
+            color: rgb(151, 100, 232);
+        }
+    }
+}

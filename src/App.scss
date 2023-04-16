@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(/Fonts/Poppins-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins BoldItallic";
+  src: url(/Fonts/Poppins-BoldItallic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins ExtraBold";
+  src: url(/Fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins ExtraBoldItallic";
+  src: url(/Fonts/Poppins-ExtraBoldItallic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Itallic";
+  src: url(/Fonts/Poppins-Itallic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url(/Fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins Regular";
+}
+
+#root{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background: #1b1a1a;
+  }
+
+  hr{
+    border:1px solid #845353;
+  }
+
+  img{
+    background-color: rgb(134, 89, 206);
+  }
+}
+
+.App {
+  width: max(300px,30%);
+  padding: 1rem;
+  border-radius: 1rem 1rem 6rem 1rem;
+  box-shadow: 2px 1px 10px rgb(45, 44, 44);
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .divider {
+    margin-block: 2rem;
+    position: relative;
+    img {
+      background-color: #8c47fd;
+      height: min(5vh, 2.5rem);
+      padding: min(2.5vh,0.5rem);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      cursor: pointer;
+
+      position: absolute;
+      right: 0;
+      top: -22px;
+
+      @media screen and (max-width: 500px) {
+        padding: 0.2rem;
+        right: 50%;
+        top: -18px;
+      } 
+      }
+    }
+  }

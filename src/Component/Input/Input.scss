@@ -1,0 +1,71 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  --width: 80%;
+
+  &__label {
+    max-width: var(--width);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.08rem;
+    font-family: "Poppins Bold";
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+
+  &__field {
+    width: clamp(var(--width), 30%, 10vh);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-family: "Poppins ExtraBold";
+    cursor: pointer;
+    outline: 0;
+
+    &:focus {
+      border: 1px solid rebeccapurple;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  .error {
+    &:not(input) {
+      color: red;
+      font-size: small;
+      margin-top: 5px;
+    }
+
+    &:not(:not(input)) {
+      border: 1px solid red;
+    }
+
+    &:not(:not(label)) {
+      color: red ;
+      opacity: 0.8;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &__field {
+      border: 1px solid #aea7a7;
+      background: #1b1a1a;
+      color: #cdc4c4;
+    }
+
+    &__label {
+      color: #cdc4c4;
+    }
+}
+}
